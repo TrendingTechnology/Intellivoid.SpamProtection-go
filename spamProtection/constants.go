@@ -15,28 +15,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package main
+package spamProtection
 
-import (
-	"log"
-	"testing"
-
-	"github.com/Dank-del/Intellivoid.SpamProtection-go/spamProtection"
+// the endpoint used to get responses from Intellivoid servers.
+// for more information please read our documents:
+//  https://docs.intellivoid.net/spamprotection/v1/lookup
+const (
+	endPoint  = "https://api.intellivoid.net/spamprotection/v1/lookup?query=%"
+	endPointI = endPoint + "d"
+	endPointS = endPoint + "s"
 )
-
-func TestAPI(t *testing.T) {
-	responseID, err := spamProtection.MakeRequestbyID(1181941155)
-	if err != nil {
-		log.Fatal(err.Error())
-	}
-	if responseID.Success != true {
-		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyID)] Failed request, response code: %d", responseID.ResponseCode)
-	}
-	responseUsername, err := spamProtection.MakeRequestbyUsername("Falling_inside_the_black")
-	if err != nil {
-		log.Fatal(err.Error())
-	}
-	if responseUsername.Success != true {
-		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyUsername)] Failed request, response code: %d", responseUsername.ResponseCode)
-	}
-}

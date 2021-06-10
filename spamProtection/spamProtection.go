@@ -15,28 +15,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package main
-
-import (
-	"log"
-	"testing"
-
-	"github.com/Dank-del/Intellivoid.SpamProtection-go/spamProtection"
-)
-
-func TestAPI(t *testing.T) {
-	responseID, err := spamProtection.MakeRequestbyID(1181941155)
-	if err != nil {
-		log.Fatal(err.Error())
-	}
-	if responseID.Success != true {
-		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyID)] Failed request, response code: %d", responseID.ResponseCode)
-	}
-	responseUsername, err := spamProtection.MakeRequestbyUsername("Falling_inside_the_black")
-	if err != nil {
-		log.Fatal(err.Error())
-	}
-	if responseUsername.Success != true {
-		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyUsername)] Failed request, response code: %d", responseUsername.ResponseCode)
-	}
-}
+// spamProtection package is a rich tool to lookup
+// a user, chat or channel in the SpamProtection database.
+package spamProtection
