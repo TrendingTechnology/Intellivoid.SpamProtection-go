@@ -57,10 +57,11 @@ type Error struct {
 	Message   string `json:"message"`
 }
 
+// SpamPrediction
 type SpamPrediction struct {
 	// The probability (confidence) of this generalized ham
 	// (not spam) prediction, if no prediction is
-	// available then it will be null
+	// available then it will be zero
 	HamPrediction float64 `json:"ham_prediction"`
 
 	// The probability (confidence) of this generalized
@@ -69,6 +70,43 @@ type SpamPrediction struct {
 	SpamPrediction float64 `json:"spam_prediction"`
 }
 
+// LanguagePrediction contains prediction of the language
+// of a user, channels or groups.
+// If unavailable; it can't determine the language and or
+// server didn't have any data to make the prediction
+// in the first place.
+//
+// > question: why predict language of a group or channel as well
+// as users? won't it only increase the payload of servers?
+// I mean has it worth to spend resources on predicting
+// a channel's language?
+// > founder's response: You forget how efficiently built it is.
+// It doesn't need to store the contents to remember the
+// prediction history, it uses Generalization to accomplish
+// this so it can accurately make a prediction based on
+// the last 100 messages.
+// And this takes up at least 1kb of data at best.
+// because it uses [ziproto](https://github.com/Netkas/ZiProto-Python)
+// for I/O.
+// This cannot be accomplished most of the time when using
+// stuff like Tensorflow; because it requires more resources
+// to accomplish and using these libraries and dependencies;
+// you don't really have control over how the data is stored and used.
+// When I build all these components from scratch,
+// I can control everything from how each byte is sent
+// to the hardware-level.
+// Minimizing the overhead in your software is
+// a great way to accomplish a lot more than what modern computers
+// are fully capable of; sadly not a lot of programmers are aware
+// of this and often uses 100% of the cpu resources to accomplish
+// something extremely inefficiently.
+// The problem with my approach is that it causes more ware
+// and tear on the hardware, which is why Intellivoid
+// has been down for the past month or so because
+// our hosting provider yelled at us for destroying their hardware.
+// Due to how optimized the software is on a hardware-level;
+// it uses more of the hardware than the hardware was
+// designed to handle.
 type LanguagePrediction struct {
 	// The ISO 639-1 language code predicted by SpamProtectionBot,
 	// if no prediction is available then it will be
@@ -81,6 +119,8 @@ type LanguagePrediction struct {
 	Probability float64 `json:"probability"`
 }
 
+// Attributes struct contains attributes information
+// of a user, group or channel.
 // There is no such thing as "Official users",
 // only "Official channels" or groups,
 // these are entities with the  "blue checkmark"
@@ -141,7 +181,7 @@ type Attributes struct {
 	IntellivoidAccountsVerified bool `json:"intellivoid_accounts_verified"`
 
 	// Indicates if this entity is deemed
-	//official by Intellivoid Technologies
+	// official by Intellivoid Technologies
 	IsOfficial bool `json:"is_official"`
 }
 
