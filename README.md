@@ -105,7 +105,7 @@ func main() {
 
  * If you want to be aware of most recent changes, you can join [Intellivoid updates channel](https://t.me/Intellivoid).
  * Have a problem with API? Servers are down? Somethign went wrong? Ensure that you are joined at our [Support chat](https://t.me/IntellivoidDiscussions)!
- * Have a personal problem with library? Feel lonely? Have to talk with repository's owner? Contact the [Maintainer](https://t.me/dank_as_fuck)!
+ * Having a problem with library? Wanna talk with repository's owner? Contact the [Maintainer](https://t.me/dank_as_fuck)!
  * Still don't know what's going on? Not sure about how API works? Be sure to read [Introduction](https://docs.intellivoid.net/spamprotection/introduction).
  * Want to read original documentation? Want to see how we receive data from Servers? You can read [API documents](https://docs.intellivoid.net/spamprotection/v1/lookup) then!
  * Want to guarantee your group security? Want to protect your groups from spammers? You can add our official [SpamProtection bot](https://t.me/SpamProtectionBot) with full features of our API!
@@ -122,7 +122,7 @@ func main() {
  * [Support chat](https://t.me/IntellivoidDiscussions)
  * [Intellivoid Community](https://t.me/IntellivoidCommunity)
  * [Discord server](https://discord.gg/euNkxEKPJb)
- * [Netkas](https://t.me/Netkas)
+ * [Maintainer Telegram](https://t.me/dank_as_fuck)
  * [API Introduction](https://docs.intellivoid.net/spamprotection/introduction)
  * [API documents](https://docs.intellivoid.net/spamprotection/v1/lookup)
  * [SpamProtection bot](https://t.me/SpamProtectionBot)
