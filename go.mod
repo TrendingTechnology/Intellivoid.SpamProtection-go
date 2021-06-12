@@ -1,3 +1,3 @@
-module github.com/Dank-del/Intellivoid.SpamProtection-go
+module github.com/Intellivoid/Intellivoid.SpamProtection-go
 
 go 1.15

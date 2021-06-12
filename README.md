@@ -10,7 +10,7 @@
 https://intellivoid.net/assets/media/TextLogo2.svg
 -->
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/Dank-del/Intellivoid.SpamProtection-go.svg)](https://pkg.go.dev/github.com/Dank-del/Intellivoid.SpamProtection-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/Intellivoid/Intellivoid.SpamProtection-go.svg)](https://pkg.go.dev/github.com/Intellivoid/Intellivoid.SpamProtection-go)
 
 SpamProtection-Go is an Official [golang](https://go.dev) wrapper for [Intellivoid](https://intellivoid.net) SpamProtection API, which is fast, secure and requires no additional packages to be installed.
 
@@ -62,14 +62,14 @@ For better experience, we recommend you to use latest version of Go (v1.16), but
 You can easily download the library with the standard `go get` command:
 
 ```bash
-go get github.com/Dank-del/Intellivoid.SpamProtection-go
+go get github.com/Intellivoid/Intellivoid.SpamProtection-go
 ```
 or
 ```bash
-dep ensure -add github.com/Dank-del/Intellivoid.SpamProtection-go
+dep ensure -add github.com/Intellivoid/Intellivoid.SpamProtection-go
 ```
 
-Full documentation of this library, can be found [here](https://pkg.go.dev/github.com/Dank-del/Intellivoid.SpamProtection-go).
+Full documentation of this library, can be found [here](https://pkg.go.dev/github.com/Intellivoid/Intellivoid.SpamProtection-go).
 
 <hr/>
 
@@ -80,7 +80,7 @@ The `spamProtection` package contains all helpers you need!
 ```go
 package main
 
-import "github.com/Dank-del/Intellivoid.SpamProtection-go/spamProtection"
+import "github.com/Intellivoid/Intellivoid.SpamProtection-go/spamProtection"
 
 func main() {
 	// get information of a user, channel or a group with a telegram id (int64)
@@ -109,7 +109,7 @@ func main() {
  * Still don't know what's going on? Not sure about how API works? Be sure to read [Introduction](https://docs.intellivoid.net/spamprotection/introduction).
  * Want to read original documentation? Want to see how we receive data from Servers? You can read [API documents](https://docs.intellivoid.net/spamprotection/v1/lookup) then!
  * Want to guarantee your group security? Want to protect your groups from spammers? You can add our official [SpamProtection bot](https://t.me/SpamProtectionBot) with full features of our API!
- * If you think you have found a bug or have a feature request, feel free to use our [issue tracker](https://github.com/Dank-del/Intellivoid.SpamProtection-go/issues). Before opening a new issue, please search to see if your problem has already been reported or not.  Try to be as detailed as possible in your issue reports.
+ * If you think you have found a bug or have a feature request, feel free to use our [issue tracker](https://github.com/Intellivoid/Intellivoid.SpamProtection-go/issues). Before opening a new issue, please search to see if your problem has already been reported or not.  Try to be as detailed as possible in your issue reports.
  * If you need help using Intellivoid's APIs or have other questions we suggest you to join our [telegram community](https://t.me/IntellivoidCommunity).  Please do not use the GitHub issue tracker for personal support requests.
 
 <hr/>

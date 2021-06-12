@@ -1,5 +1,5 @@
 /*
- * This file is part of Intellivoid.SpamProtection-go (https://github.com/Dank-del/Intellivoid.SpamProtection-go).
+ * This file is part of Intellivoid.SpamProtection-go (https://github.com/Intellivoid/Intellivoid.SpamProtection-go).
  * Copyright (c) 2021 Sayan Biswas.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/Dank-del/Intellivoid.SpamProtection-go/spamProtection"
+	"github.com/Intellivoid/Intellivoid.SpamProtection-go/spamProtection"
 )
 
 func TestAPI(t *testing.T) {
