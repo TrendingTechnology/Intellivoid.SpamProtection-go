@@ -131,7 +131,7 @@ func main() {
 
 ## License
 
-<img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/Something_that_looks_like_Diamond.png" width="25px"></img> The Intellivoid.SpamProtection-go project is under the [MIT License](https://opensource.org/licenses/GPL-3.0). You can find the license file [here](LICENSE).
+<img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/Something_that_looks_like_Diamond.png" width="25px"></img> The Intellivoid.SpamProtection-go project is under the [GPL3.0](https://opensource.org/licenses/GPL-3.0). You can find the license file [here](LICENSE).
 
 
 <img src="https://intellivoid.net/assets/media/TextLogo2.svg" width="195px">
