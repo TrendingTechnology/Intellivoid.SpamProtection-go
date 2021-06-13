@@ -35,19 +35,44 @@ const (
 
 // Intellivoid Spam protection flags
 const (
-	NoneFlag       = "0x0"
-	SpecialFlag    = "0xSP"
-	SpamFlag       = "0xSPAM"
-	EvadeFlag      = "0xEVADE"
+	// None or an Undefined reason
+	NoneFlag = "0x0"
+
+	// Special reason, like consulting operators
+	SpecialFlag = "0xSP"
+
+	// Spam or Unwanted promotion
+	SpamFlag = "0xSPAM"
+
+	// Ban Evade using alt accounts
+	EvadeFlag = "0xEVADE"
+
+	// Child pornography or Child abuse
 	ChildAbuseFlag = "0xCACP"
-	ImperFlag      = "0xIMPER"
-	PiracyFlag     = "0xPIRACY"
-	NSFWFlag       = "0xNSFW"
-	PrivateFlag    = "0xPRIVATE"
-	RaidFlag       = "0xRAID"
-	ScamFlag       = "0xSCAM"
-	MassAddFlag    = "0xMASSADD"
-	NameSpamFlag   = "0xNAMESPAM"
+
+	// Malicious Impersonation
+	ImperFlag = "0xIMPER"
+
+	// Promote or spam of pirated content
+	PiracyFlag = "0xPIRACY"
+
+	// Promote or spam of NSFW content
+	NSFWFlag = "0xNSFW"
+
+	// Unsolicited Spam or Promote
+	PrivateFlag = "0xPRIVATE"
+
+	// Raid initializer or Participator
+	RaidFlag = "0xRAID"
+
+	// Scamming
+	ScamFlag = "0xSCAM"
+
+	// Mass adding users to group or channels
+	MassAddFlag = "0xMASSADD"
+
+	// Promotion or spam via name or bio
+	NameSpamFlag = "0xNAMESPAM"
 )
 
 // The entity type constants,
