@@ -1,7 +1,7 @@
 # <img src="https://intellivoid.net/assets/favicon/android-chrome-192x192.png" width="35px" align="left"></img> SpamProtection-go 
-> Name:		SpamProtection-go			\
-> Version:	v1.0.2				\
-> Edit:		11 Jun 2021			\
+> Name:		SpamProtection-go	\
+> Version:	v1.0.4				\
+> Edit:		13 Jun 2021			\
 > By:		Intellivoid (C)	
 
 -----------------------------------------------------------
@@ -104,12 +104,19 @@ func main() {
 ## Support and Contributions
 
  * If you want to be aware of most recent changes, you can join [Intellivoid updates channel](https://t.me/Intellivoid).
+
  * Have a problem with API? Servers are down? Somethign went wrong? Ensure that you are joined at our [Support chat](https://t.me/IntellivoidDiscussions)!
+
  * Having a problem with library? Wanna talk with repository's owner? Contact the [Maintainer](https://t.me/dank_as_fuck)!
+
  * Still don't know what's going on? Not sure about how API works? Be sure to read [Introduction](https://docs.intellivoid.net/spamprotection/introduction).
+
  * Want to read original documentation? Want to see how we receive data from Servers? You can read [API documents](https://docs.intellivoid.net/spamprotection/v1/lookup) then!
- * Want to guarantee your group security? Want to protect your groups from spammers? You can add our official [SpamProtection bot](https://t.me/SpamProtectionBot) with full features of our API!
+
+ * Want to guarantee your group security? Protecting your groups from spammers is in high-priority for you? You can add our official [SpamProtection bot](https://t.me/SpamProtectionBot) with full features of our API!
+
  * If you think you have found a bug or have a feature request, feel free to use our [issue tracker](https://github.com/Intellivoid/Intellivoid.SpamProtection-go/issues). Before opening a new issue, please search to see if your problem has already been reported or not.  Try to be as detailed as possible in your issue reports.
+ 
  * If you need help using Intellivoid's APIs or have other questions we suggest you to join our [telegram community](https://t.me/IntellivoidCommunity).  Please do not use the GitHub issue tracker for personal support requests.
 
 <hr/>
@@ -131,7 +138,7 @@ func main() {
 
 ## License
 
-<img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/Something_that_looks_like_Diamond.png" width="25px"></img> The Intellivoid.SpamProtection-go project is under the [GPL3.0](https://opensource.org/licenses/GPL-3.0). You can find the license file [here](LICENSE).
+<img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/Something_that_looks_like_Diamond.png" width="25px"></img> The Intellivoid.SpamProtection-go project is under the [GPL-3.0](https://opensource.org/licenses/GPL-3.0) license. You can find the license file [here](LICENSE).
 
 
 <img src="https://intellivoid.net/assets/media/TextLogo2.svg" width="195px">

@@ -1,6 +1,6 @@
 /*
  * This file is part of Intellivoid.SpamProtection-go (https://github.com/Intellivoid/Intellivoid.SpamProtection-go).
- * Copyright (c) 2021 Sayan Biswas.
+ * Copyright (c) 2021 Sayan Biswas, ALiwoto.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,17 +25,20 @@ import (
 )
 
 func TestAPI(t *testing.T) {
-	responseID, err := spamProtection.MakeRequestbyID(1181941155)
+	responseID, err := spamProtection.GetInfoByID(1181941155)
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+
 	if responseID.Success != true {
 		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyID)] Failed request, response code: %d", responseID.ResponseCode)
 	}
-	responseUsername, err := spamProtection.MakeRequestbyUsername("Falling_inside_the_black")
+
+	responseUsername, err := spamProtection.GetInfoByUsername("Falling_inside_the_black")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+
 	if responseUsername.Success != true {
 		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyUsername)] Failed request, response code: %d", responseUsername.ResponseCode)
 	}
