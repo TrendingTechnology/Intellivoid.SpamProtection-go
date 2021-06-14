@@ -18,18 +18,18 @@
 
 # Blacklist flags
 
-<img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/801872469010808873.gif" width="25px"></img>Here you can see all blacklist flags in the API:
+### <img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/801872469010808873.gif" width="25px"></img>Here you can see all blacklist flags in the API:
 
- * 0x0        : None or an Undefined reason
- * 0xSP       : Special reason, like consulting operators
- * 0xSPAM     : Spam or Unwanted promotion
- * 0xEVADE    : Ban Evade using alt accounts
- * 0xCACP     : Child pornography or Child abuse
- * 0xIMPER    : Malicious Impersonation
- * 0xPIRACY   : Promote or spam of pirated content
- * 0xNSFW     : Promote or spam of NSFW content
- * 0xPRIVATE  : Unsolicited Spam or Promote
- * 0xRAID     : Raid initializer or Participator
- * 0xSCAM     : Scamming
- * 0xMASSADD  : Mass adding users to group or channels
- * 0xNAMESPAM : Promotion or spam via name or bio
+ * `0x0`        : None or an Undefined reason
+ * `0xSP`       : Special reason, like consulting operators
+ * `0xSPAM`     : Spam or Unwanted promotion
+ * `0xEVADE`    : Ban Evade using alt accounts
+ * `0xCACP`     : Child pornography or Child abuse
+ * `0xIMPER`    : Malicious Impersonation
+ * `0xPIRACY`   : Promote or spam of pirated content
+ * `0xNSFW`     : Promote or spam of NSFW content
+ * `0xPRIVATE`  : Unsolicited Spam or Promote
+ * `0xRAID`     : Raid initializer or Participator
+ * `0xSCAM`     : Scamming
+ * `0xMASSADD`  : Mass adding users to group or channels
+ * `0xNAMESPAM` : Promotion or spam via name or bio

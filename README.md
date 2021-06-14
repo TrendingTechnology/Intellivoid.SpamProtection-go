@@ -108,6 +108,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+
+	// use this method to see if the target is blacklisted or not
 	if info.IsBlacklisted() {
 		// use GetType() method to see if the target is a user, 
 		// channel, group or bot?
