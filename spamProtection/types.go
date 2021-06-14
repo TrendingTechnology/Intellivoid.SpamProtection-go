@@ -1,6 +1,6 @@
 /*
  * This file is part of Intellivoid.SpamProtection-go (https://github.com/Intellivoid/Intellivoid.SpamProtection-go).
- * Copyright (c) 2021 Sayan Biswas.
+ * Copyright (c) 2021 Sayan Biswas, ALiwoto.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 
 package spamProtection
 
-// Top-Level Struct.
+// APIResponse is the Top-Level Struct in json data.
 // The value success will always be returned
 // If it's true then results will be available as an object.
 // If false the error object will return and
@@ -57,7 +57,8 @@ type Error struct {
 	Message   string `json:"message"`
 }
 
-// SpamPrediction
+// SpamPrediction contains main statistics about
+// the target being looked up.
 type SpamPrediction struct {
 	// The probability (confidence) of this generalized ham
 	// (not spam) prediction, if no prediction is
@@ -147,18 +148,18 @@ type Attributes struct {
 	// Indicates if this entity was blacklisted by a operator or agent.
 	IsBlacklisted bool `json:"is_blacklisted"`
 
-	// If the entity is blacklisted, the blacklist flag will be
-	//  available otherwise it will be null
+	// If the target is blacklisted, the blacklist flag will be
+	// available otherwise it will be an empty string.
 	BlacklistFlag string `json:"blacklist_flag"`
 
-	// If the entity is blacklisted, a user friendly message
+	// If the target is blacklisted, a user friendly message
 	// of the blacklist flag will be available otherwise
-	// it will be null
+	// it will be an empty string
 	BlacklistReason string `json:"blacklist_reason"`
 
-	// If the entity was blacklisted for 0xEVADE then the
+	// If the target was blacklisted for 0xEVADE then the
 	// original private telegram ID (ptid) will be available,
-	// otherwise it will be null
+	// otherwise it will be an empty string
 	OriginalPrivateID string `json:"original_private_id"`
 
 	// Indicates if SpamProtection believes that
@@ -172,8 +173,8 @@ type Attributes struct {
 	// reports spam to SpamProtectionBot (Userbot Agent)
 	IsAgent bool `json:"is_agent"`
 
-	// Indicates if this user is whitelisted and c
-	// annot be blacklisted or seen as a potential spammer
+	// Indicates if this user is whitelisted and
+	// cannot be blacklisted or seen as a potential spammer
 	IsWhitelisted bool `json:"is_whitelisted"`
 
 	// Indicates if this user has verified their

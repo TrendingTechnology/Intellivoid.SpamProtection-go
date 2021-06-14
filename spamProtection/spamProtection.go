@@ -1,6 +1,6 @@
 /*
  * This file is part of Intellivoid.SpamProtection-go (https://github.com/Intellivoid/Intellivoid.SpamProtection-go).
- * Copyright (c) 2021 Sayan Biswas.
+ * Copyright (c) 2021 Sayan Biswas, ALiwoto.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,5 +16,5 @@
  */
 
 // spamProtection package is a rich tool to lookup
-// a user, chat or channel in the SpamProtection database.
+// a user, chat, channel or bot in the SpamProtection database.
 package spamProtection
