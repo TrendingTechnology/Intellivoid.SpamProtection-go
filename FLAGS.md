@@ -36,7 +36,7 @@
 
 <hr/>
 
-### Helpful links
+### <img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/roxy_nod01.png" width="22px"></img> Helpful links
 
  - [SpamProtection Support chat](https://t.me/SpamProtectionSupport)
  - [Intellivoid Support account](https://t.me/IntellivoidSupport)
