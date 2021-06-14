@@ -21,7 +21,7 @@
 ### <img src="https://raw.githubusercontent.com/aliwoto/aliwoto/main/resources/801872469010808873.gif" width="25px"></img>Here you can see all blacklist flags in the API:
 
  * `0x0`        : None or an Undefined reason
- * `0xSP`       : Special reason, like consulting operators
+ * `0xSP`       : Special reason, you can consult @IntellivoidSupport for solution
  * `0xSPAM`     : Spam or Unwanted promotion
  * `0xEVADE`    : Ban Evade using alt accounts
  * `0xCACP`     : Child pornography or Child abuse
@@ -33,3 +33,10 @@
  * `0xSCAM`     : Scamming
  * `0xMASSADD`  : Mass adding users to group or channels
  * `0xNAMESPAM` : Promotion or spam via name or bio
+
+<hr/>
+
+### Helpful links
+
+ - [SpamProtection Support chat](https://t.me/SpamProtectionSupport)
+ - [Intellivoid Support account](https://t.me/IntellivoidSupport)

@@ -16,5 +16,5 @@
  */
 
 // spamProtection package is a rich tool to lookup
-// a user, chat or channel in the SpamProtection database.
+// a user, chat, channel or bot in the SpamProtection database.
 package spamProtection

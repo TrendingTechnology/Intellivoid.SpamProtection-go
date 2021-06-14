@@ -33,6 +33,7 @@ import (
 // if something went wrong in server-side and we get the
 // full information in response, it will return you that
 // `error`, so the `info` value will be nil.
+// negative IDs (like group's id) are supported.
 func GetInfoByID(id int64) (info *APIResponse, err error) {
 	if id == 0 {
 		return nil, errors.New("ID cannot be zero")
@@ -75,6 +76,11 @@ func GetInfoByID(id int64) (info *APIResponse, err error) {
 // if something went wrong in server-side and we get the
 // full information in response, it will return you that
 // `error`, so the `info` value will be nil.
+// it supports these formats:
+//  * the_username
+//  * @the_username
+//  * t.me/falling_inside_the_black
+//  * http://telesco.pe/NightShadowsHangout
 func GetInfoByUsername(username string) (info *APIResponse, err error) {
 	if len(username) == 0 {
 		return nil, errors.New("username cannot be empty")
@@ -86,7 +92,8 @@ func GetInfoByUsername(username string) (info *APIResponse, err error) {
 		// always check if the username is valid or not.
 		// sending http request blindly without any checking
 		// will only increase running time order.
-		return nil, errors.New("the username in invalid")
+		return nil, errors.New("the username \"" +
+			username + "\" is invalid")
 	}
 
 	addr := fmt.Sprintf(endPointS, username)
@@ -129,17 +136,25 @@ func IsValidUsername(text string) bool {
 	}
 
 	for i, c := range text {
-		if i == 0 {
+		// when we are in the base index (0)
+		// the character should be english,
+		// otherwise return false
+		if i == baseIndex {
 			if !isEnglish(c) {
 				return false
 			}
 
-			if !isNumOrEng(c) {
-				return false
-			}
+			continue
+		}
+
+		// check if it's english, number or underline ('_'),
+		// if it's not return false
+		if !isNumOrEng(c) {
+			return false
 		}
 	}
 
+	// all checks have been passes, so return true
 	return true
 }
 
@@ -147,14 +162,26 @@ func IsValidUsername(text string) bool {
 // username.
 // examples:
 //  " @Falling_inside_the_black  " => "Falling_inside_the_black"
+//  "t.me/dank_as_fuck " => "dank_as_fuck"
 func FixUsername(value string) string {
 	if len(value) == 0 {
-		return ""
+		return empty
 	}
 
 	value = strings.TrimSpace(value)
-	value = strings.TrimPrefix(value, "@")
+	value = strings.TrimPrefix(value, atSign)
 	value = strings.TrimSpace(value)
+
+	if strings.Contains(value, slash) {
+		strs := strings.Split(value, slash)
+		l := len(strs)
+		if l == baseIndex {
+			return empty
+		}
+
+		l--
+		return strs[l]
+	}
 
 	return value
 }
@@ -162,24 +189,26 @@ func FixUsername(value string) string {
 // isEnglish return `true` if `r` is an english letter,
 // otherwise `false`.
 func isEnglish(r rune) bool {
-	if r >= 'a' && r <= 'z' {
+	if r >= letterA && r <= letterZ {
 		return true
 	} else {
-		return r >= 'A' && r <= 'Z'
+		return r >= capLetterA && r <= capLetterZ
 	}
 }
 
 // isNum returns `true` if `r` is considered as a
 // number rune, otherwise `false`.
 func isNum(r rune) bool {
-	return r >= '0' || r <= '9'
+	return r >= letterZero || r <= letterNine
 }
 
 // isNumOrEng will check if `r` is rather english,
 // number or underline ('_') rune or not.
 // return `true` if yes, otherwise `false`.
 func isNumOrEng(r rune) bool {
-	return isNum(r) || isEnglish(r) || r == '_'
+	return isNum(r) ||
+		isEnglish(r) ||
+		r == underlineChar
 }
 
 // yesNo returns "Yes" for `true`,

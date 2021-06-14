@@ -28,6 +28,7 @@ const (
 
 // telegram limitations constants
 const (
+	baseIndex   = 0x0
 	minUsername = 4
 	maxUsername = 32
 	empty       = ""
@@ -89,4 +90,20 @@ const (
 const (
 	yesStr = "Yes"
 	noStr  = "No"
+)
+
+// prefixes used in fixing a username
+const (
+	atSign = "@"
+	slash  = "/"
+)
+
+const (
+	underlineChar = '_' // _
+	letterA       = 'a' // a
+	letterZ       = 'z' // z
+	capLetterA    = 'A' // A
+	capLetterZ    = 'Z' // Z
+	letterZero    = '0' // 0
+	letterNine    = '9' // 9
 )

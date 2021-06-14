@@ -24,22 +24,49 @@ import (
 	"github.com/Intellivoid/Intellivoid.SpamProtection-go/spamProtection"
 )
 
-func TestAPI(t *testing.T) {
-	responseID, err := spamProtection.GetInfoByID(1181941155)
-	if err != nil {
-		log.Fatal(err.Error())
-	}
+func TestFix(t *testing.T) {
+	str := spamProtection.FixUsername("https://t.me/NightShadowsHangout")
+	log.Println(str)
 
-	if responseID.Success != true {
-		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyID)] Failed request, response code: %d", responseID.ResponseCode)
-	}
+	str = spamProtection.FixUsername("http://t.me/NightShadowsHangout")
+	log.Println(str)
 
-	responseUsername, err := spamProtection.GetInfoByUsername("Falling_inside_the_black")
-	if err != nil {
-		log.Fatal(err.Error())
-	}
+	str = spamProtection.FixUsername("t.me/NightShadowsHangout")
+	log.Println(str)
 
-	if responseUsername.Success != true {
-		t.Errorf("[Intellivoid.SpamProtection-go (MakeRequestbyUsername)] Failed request, response code: %d", responseUsername.ResponseCode)
-	}
+	str = spamProtection.FixUsername("bullshit.me/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("twitter.me/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("whatsapp.me/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("whatsapp.me/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("facebook.me/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("I don't know what blah blag /NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("everything is supported/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("Intellivoid.net/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("  @ NightShadowsHangout  ")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("@NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("http://telesco.pe/NightShadowsHangout")
+	log.Println(str)
+
+	str = spamProtection.FixUsername("http://unknown_host/g/215600")
+	log.Println(str)
 }
